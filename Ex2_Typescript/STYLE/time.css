@@ -1,0 +1,50 @@
+header span {
+    position: absolute;
+    top: 36%;
+    left: 46%;
+    font-size: 28px;
+    color: #fff;
+    width: 100;
+}
+
+.para {
+    margin-left: 13%;
+    width: 75%;
+}
+
+.btn-success {
+    margin-left: 42%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+h2 {
+    color:cadetblue;
+}
+
+section {
+    margin-top: 20px;
+    align-items: center;
+}
+
+#txt1 {
+    padding: 2em;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color:#218838;
+}
+
+#txt {
+    padding: 1em;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(27, 131, 216);
+}
+#btnShow{
+    border-radius: 30px;
+    background-color: rgb(47, 233, 118);
+}
+.button{
+    margin-top: 20%;
+    margin-left: 43%;
+}

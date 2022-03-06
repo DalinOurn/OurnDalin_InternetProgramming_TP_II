@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .items{
+            width: auto;
+            height: auto;
+            text-align: center;
+            background-color: aqua;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="items"></div>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const id = urlParams.get('bookid');
+        let result = [];
+        let output = '';
+        fetch('https://jsonplaceholder.typicode.com/photos').then(async(res) => {
+        results = await res.json();
+        var title = '';
+        for (result in results) {
+            output +=
+                `<div class="items">` +
+                `<img src="${results[result].url}" alt="#">` +
+                `<div class="name">Title : ${results[result].title.toString().substring(0, 10)}...</div>` +
+                `<div class="price">Id : ${results[result].id}</div>` +
+                `<div class="category">Album ID : ${results[result].albumId}</div>` +
+                `<button class="btn">` +
+                `<a href="./fetchapi-detail.html?bookid=${parseInt(result)+1}">see more</a>` +
+                `</button>` +
+                `</div>`;
+        }
+        document.getElementById("items").innerHTML += output;
+
+});
+ </script>
+</body>
+
+</html>
